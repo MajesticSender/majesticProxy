@@ -1,4 +1,4 @@
-## majesticProxy
+## Majestic sender tracking proxy
 
 Setup this script on a virtual host with a dedicated (sub)domain: tracking.mydomain.com for example.
 
