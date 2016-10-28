@@ -1,9 +1,16 @@
-# majesticProxy
+## majesticProxy
 
 Setup this script on a virtual host with a dedicated (sub)domain: tracking.mydomain.com for example.
 
-## Apache
+# Requirements
+
+- php: 5>
+- php-curl
+- nginx or apache
+
+
+### Apache
 For apache configurations,  a .htaccess is enclosed
 
-## Nginx
+### Nginx
 For Nginx configurations, a sample config (ngxin.sample.conf) has been provided.
