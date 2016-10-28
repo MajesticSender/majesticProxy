@@ -13,4 +13,4 @@ Setup this script on a virtual host with a dedicated (sub)domain: tracking.mydom
 For apache configurations,  a .htaccess is enclosed
 
 ### Nginx
-For Nginx configurations, a sample config (ngxin.sample.conf) has been provided.
+For Nginx configurations, a sample config (ngxin.example.conf) has been provided.
