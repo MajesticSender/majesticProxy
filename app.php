@@ -12,17 +12,28 @@
  */
 
 $config['baseUrl'] = 'http://tracking.majesticsender.com';
+$config['uriBase'] =  '';
+
 
 #### DO NOT EDIT BELOW THIS LINE ###
+
+
+$uri = $_SERVER['REQUEST_URI'];
+
+if($config['uriBase']){
+ $uri = preg_replace("#". $config['uriBase'] . "#",  "/", $uri);
+}
 
 if(!is_callable('curl_init'))
     exit('Majestic proxy requires cURL, see: <a href="http://php.net/manual/en/curl.installation.php">http://php.net/manual/en/curl.installation.php</a> for the installation.');
 
-if ($_SERVER['REQUEST_URI'] == '/')
+if ($uri == '/')
     exit('Majestic proxy 0.01');
 
+
 $baseUrl = $config['baseUrl'];
-$url = $baseUrl . $_SERVER['REQUEST_URI'];
+$url =  $baseUrl. $uri;
+
 $ch = curl_init($url);
 
 if (strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
